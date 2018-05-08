@@ -1,0 +1,11 @@
+/* Jason Project */
+
+MAS electricity_market {
+
+    infrastructure: Centralised
+
+    agents:
+        prosumer [verbose=2] #5;
+
+}
+

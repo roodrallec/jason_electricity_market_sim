@@ -1,0 +1,9 @@
+/* Jason Project */
+
+MAS electricity_market {
+
+    infrastructure: Centralised
+
+    agents:
+}
+
