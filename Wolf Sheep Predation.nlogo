@@ -225,7 +225,7 @@ initial-number-wolves
 initial-number-wolves
 0
 250
-50.0
+108.0
 1
 1
 NIL
