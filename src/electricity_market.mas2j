@@ -6,9 +6,9 @@ MAS electricity_market {
 
     agents:  network_manager;
 
-        seller;
+        seller#3;
 
-        buyer;
+        buyer#2;
 
 }
 
