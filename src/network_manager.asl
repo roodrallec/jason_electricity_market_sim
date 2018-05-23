@@ -3,25 +3,29 @@
 /* Initial beliefs and rules */
 
 /* Initial goals */
-
+!greet.
 /* Plans */
 
-+buying(E) : true <- 
-	.print("finding energy ", E, " for agent ", buyer);
-	+needs(buyer, E);
-	!!pair.
++buyer(Agent, E) : true <- 
+	.print("finding energy ", E, " for agent ", Agent);
+	!pair.
 	
-+selling(E) : true <- 
-	.print("finding energy ", E, " for agent ", seller);
-	+has(seller, E);
-	!!pair.
++seller(Agent, E) : true <- 
+	.print("finding energy ", E, " for agent ", Agent);
+	!pair.
+
++!greet : true <-
+    .my_name(Me);
+    .broadcast(tell, manager(Me)).
 	
-+!pair : needs(B_agent, E_buying) & has(S_agent, E_selling) & E_selling >= E_buying <-
++!pair : buyer(B_agent, E_buying) & seller(S_agent, E_selling)  <-
 	.print("pairing buyer agent ", B_agent, " with seller agent ", S_agent);
-	.send(buyer, tell, bought(E_buying));
-	.send(seller, tell, sold(E_buying)).
+	.min([E_selling, E_buying], AgreedAmount);
+	.print("They agree on amount ", AgreedAmount);
+	-buyer(B_agent, E_buying)[source(B_agent)];
+	-seller(S_agent, E_selling)[source(S_agent)];
+	.send(B_agent, tell, traded(AgreedAmount));
+	.send(S_agent, tell, traded(-AgreedAmount));
+	.send(logger, tell, trade(S_agent, B_agent, AgreedAmount)).
 	
-+!pair : needs(B_agent, E_buying) & has(S_agent, E_selling) & E_selling < E_buying <-
-	.print("pairing buyer agent ", B_agent, " with seller agent ", S_agent);
-	.send(buyer, tell, bought(E_selling));
-	.send(seller, tell, sold(E_selling)).
+
