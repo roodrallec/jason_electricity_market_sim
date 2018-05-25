@@ -2,6 +2,8 @@
 
 /* Initial beliefs and rules */
 managers([]).
+energyNeeded(0).
+currentBalance(0).
 head([H|T],Head) :- Head = H.
 /* Initial goals */
 !findProsumer.	
@@ -15,42 +17,40 @@ head([H|T],Head) :- Head = H.
 	   .send(tradersProvider, tell, trader(Me)).
 	                          
 +!trade
-	: energy_needed(E) & currentBalance(B) &  B > E  & managers(Managers)
+	: energyNeeded(E) & currentBalance(B) & managers(Managers) 
 	<- 	.my_name(Me);
 	    .shuffle(Managers, Shuffled);
 		?head(Shuffled, H);
-	    .print("I need ", E - B," amount of energy");
-        .print("Requesting trade from manager ", H);
+	    .print("I need ", B," amount of energy");
+        //.print("Requesting trade from manager ", H);
 		if(E > 0) {      
-		    .send(H, tell, buyer(Me, E - B));
+		    .send(H, achieve, buyer(Me, E - B));
 		}
 		if(E < 0) {      
-		    .send(H, tell, seller(Me, B - E));
+		    .send(H, achieve, seller(Me, B - E));
 		}.
 
-+traded(E_traded) 
-	: currentBalance(B) & energy_needed(E) 
-	<- .print("I traded ", E_bought," amount of energy");
-	    newBalance = B + E_traded;
-		-+currentBalance(newBalance); // -+ necessary
++!acceptTrade(E_traded) 
+	: currentBalance(B) & energyNeeded(E) 
+	<- //.print("I traded ", E_traded," amount of energy");
+	    -currentBalance(B);
+		+currentBalance(B + E_traded); // -+ necessary
 		.my_name(Me); 
-		if(E > 0 & B >= E) {      
+		if(E == B | (E > 0 & E - B < 0) | (E < 0 & B - E < 0)) {      
 		    .print("I ", Me," am happy now, I have enough energy");
 		} else {
-		    if(E < 0 & B <= E) {      
-		        .print("I ", Me," am happy now, I sold enough energy");
-		    } else {
-			   !trade;
-			}
+		.print("FML");
+		  !trade;
 		}.
 
 +newTurn(Price)
     : prosumer(Who) 
-	<-  .send(Who, tell, newDecision(Price));
+	<-  .send(Who, achieve, newDecision(Price));
 		-newTurn(Price)[source(logger)].
 	
-+energyNeeds(E) 
-   <- -+energy_needed(C);
++energyNeeds(E) : prosumer(Who)  
+   <- -+energyNeeded(E);
       -+currentBalance(0);
+	  -energyNeeds(E)[source(Who)];
 	  !trade.
 	

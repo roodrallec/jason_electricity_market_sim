@@ -7,7 +7,7 @@ sensitivity(0.5).
 !initialize.
 /* Plans */
 
-+newDecision(Price) 
++!newDecision(Price) 
     : production(P) & costPerUnit(UnitCost)
 	& sensitivity(S) & potential(Potential) & trader(Trader)
 	<- if (Price < UnitCost) {
@@ -17,9 +17,8 @@ sensitivity(0.5).
 	   }
 	   -+production(NewProduction)
 	   .print("newProduction", NewProduction);
-	   .send(logger, tell, produced(NewProduction, Potential));
-	   .send(Trader, tell, energyNeeds(NewProduction));
-	   -newDecision(Price)[source(Trader)].
+	   .send(logger, achieve, logProduction(NewProduction, Potential));
+	   .send(Trader, tell, energyNeeds(NewProduction)).
 	
 
 +!findTrader
