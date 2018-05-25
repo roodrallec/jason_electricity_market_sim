@@ -1,4 +1,4 @@
-// Agent netwwork_manager in project electricity_market.mas2j
+// Agent network_manager in project electricity_market.mas2j
 
 /* Initial beliefs and rules */
 
