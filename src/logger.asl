@@ -30,7 +30,7 @@ adjustPrice(OldPrice, Production, Consumption, NewPrice) :- NewPrice = OldPrice.
 
 +!makeNewTurn
 	: turn(T) & price(T, OldPrice) & production(T, A, P) & consumption(T, C) & needs(T, N)        
-	<- 	.wait(10000);
+	<- 	.wait(5000);
 	    .print("produced: ", A, " potential ", P);
 		.print("consumed: ", C, " need ", N);
 	    .print("new turn begins ", T + 1);
@@ -42,6 +42,6 @@ adjustPrice(OldPrice, Production, Consumption, NewPrice) :- NewPrice = OldPrice.
 		?adjustPrice(OldPrice, P, C, Price);
 		+price(T+1, Price);
 		.broadcast(tell, newTurn(Price));
-		.wait(10000);
+		.wait(30000);
 		!makeNewTurn.
 

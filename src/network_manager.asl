@@ -16,8 +16,8 @@ bact(0).
 	!pair(Agent, Seller, E, Sell).
 
 +!buyer(Agent, E) : bnum(B)  <- 
-    +buyer(Agent, E, B);
-	-+bnum(B+1).
+    -+bnum(B+1);
+    +buyer(Agent, E, B).
 	
 +!seller(Agent, E) : buyer(Buyer, Buy, B) & bact(B) <- 
     -buyer(Buyer, Buy,B);
@@ -26,8 +26,8 @@ bact(0).
 	!pair(Buyer, Agent, Buy, E).
 
 +!seller(Agent, E) : snum(S)  <- 
-    +seller(Agent, E, S);
-	-+snum(S+1).
+	-+snum(S+1);
+    +seller(Agent, E, S).
 	
 +!greet : true <-
     .my_name(Me);
@@ -45,7 +45,7 @@ bact(0).
 	
 +!pair(B_agent, S_agent, E_buying, E_selling) <-
 	//.print("pairing buyer agent ", B_agent, " with seller agent ", S_agent);
-	.print("pairing buyer agent ",B_agent,"  ", E_buying, " with seller agent ",S_agent,"  ", E_selling);
+	//.print("pairing buyer agent ",B_agent,"  ", E_buying, " with seller agent ",S_agent,"  ", E_selling);
 	.min([E_selling, E_buying], AgreedAmount);
 	//.print("They agree on amount ", AgreedAmount);
 	.send(B_agent, achieve, acceptTrade(AgreedAmount));
@@ -59,7 +59,7 @@ bact(0).
 	//.print("pairing buyer agent ", B_agent, " with seller agent ", S_agent);
 	.print("pairing buyer agent ",B_agent,"  ", E_buying, " with seller agent ",S_agent,"  ", E_selling);
 	.min([E_selling, E_buying], AgreedAmount);
-	//.print("They agree on amount ", AgreedAmount);
+	.print("They agree on amount ", AgreedAmount);
 	-buyer(B_agent, E_buying, N);
 	-seller(S_agent, E_selling, A);
 	.send(B_agent, achieve, acceptTrade(AgreedAmount));

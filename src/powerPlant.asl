@@ -18,7 +18,7 @@ sensitivity(0.5).
 	   -+production(NewProduction)
 	   .print("newProduction", NewProduction);
 	   .send(logger, achieve, logProduction(NewProduction, Potential));
-	   .send(Trader, tell, energyNeeds(NewProduction)).
+	   .send(Trader, tell, energyNeeds(-NewProduction)).
 	
 
 +!findTrader
