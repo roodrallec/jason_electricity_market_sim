@@ -17,7 +17,7 @@
 	: trader(T) & prosumer(P)  
 	<- -prosumer(P)[source(P)];
 	   -trader(T)[source(T)];
-	   //.print("pairing ", P , " and ", T);
+	   .print("pairing ", P , " and ", T);
 	   .send(T, tell, prosumer(P));
 	   .send(P, tell, trader(T)).
 	

@@ -21,25 +21,23 @@ head([H|T],Head) :- Head = H.
 	<- 	.my_name(Me);
 	    .shuffle(Managers, Shuffled);
 		?head(Shuffled, H);
-	    .print("I need ", B," amount of energy");
+	    .print("I need ", E," amount of energy balance:", B);
         //.print("Requesting trade from manager ", H);
-		if(E > 0) {      
+		if(E > 0 & E - B > 0) {      
 		    .send(H, achieve, buyer(Me, E - B));
 		}
-		if(E < 0) {      
+		if(E < 0 & B - E > 0) {      
 		    .send(H, achieve, seller(Me, B - E));
 		}.
 
 +!acceptTrade(E_traded) 
 	: currentBalance(B) & energyNeeded(E) 
 	<- //.print("I traded ", E_traded," amount of energy");
-	    -currentBalance(B);
-		+currentBalance(B + E_traded); // -+ necessary
+		-+currentBalance(B + E_traded); // -+ necessary
 		.my_name(Me); 
 		if(E == B | (E > 0 & E - B < 0) | (E < 0 & B - E < 0)) {      
 		    .print("I ", Me," am happy now, I have enough energy");
 		} else {
-		.print("FML");
 		  !trade;
 		}.
 
