@@ -1,0 +1,25 @@
+/* Jason Project */
+
+MAS electricity_market {
+
+    infrastructure: Centralised
+
+    agents:  logger#1;  
+	
+	   tradersProvider#1;
+	
+	    network_manager#1;
+
+        trader#100;
+
+        powerPlant#2;
+		
+		factory#8;
+		
+		household#90;
+		
+		
+		
+
+}
+
