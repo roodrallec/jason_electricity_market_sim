@@ -23,8 +23,8 @@ head([H|T],Head) :- Head = H.
 	<- 	.my_name(Me);
 	    .shuffle(Managers, Shuffled);
 		?head(Shuffled, H);
-	    //.print("I need ", E," amount of energy balance:", B);
-        //.print("Requesting trade from manager ", H);
+	    .print("I need ", E," amount of energy balance:", B);
+        .print("Requesting trade from manager ", H);
 		if(E > 0 & E - B > 0) {      
 		    .send(H, achieve, buyer(Me, E - B));
 		}
@@ -34,7 +34,7 @@ head([H|T],Head) :- Head = H.
 
 +!acceptTrade(E_traded) 
 	: 	currentBalance(B) & energyNeeded(E) 
-	<- 	//.print("I traded ", E_traded," amount of energy");
+	<- 	.print("I traded ", E_traded," amount of energy");
 		-+currentBalance(B + E_traded); // -+ necessary
 		.my_name(Me); 
 		if(E == B ) {      

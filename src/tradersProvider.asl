@@ -3,9 +3,8 @@
 /* Initial beliefs and rules */
 	
 /* Initial goals */
-/* Plans */
 
-	
+/* Plans */
 +prosumer(Who) 
 	: 	trader(_) 
 	<- 	!pair(Who).

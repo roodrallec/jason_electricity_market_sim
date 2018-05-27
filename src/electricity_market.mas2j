@@ -4,19 +4,19 @@ MAS electricity_market {
 
     infrastructure: Centralised
 
-    agents:  logger#1;  
+    agents:  	logger#1;  
 	
-	   tradersProvider#1;
+	   			tradersProvider#1;
 	
-	    network_manager#1;
+				network_manager#1;
 
-        trader#1;
+				trader#10;
 
-        powerPlant#1;
+				powerPlant#5;
 		
-		factory#1;
+				//factory#1;
 		
-		household#1;
+				household#5;
 		
 		
 		
