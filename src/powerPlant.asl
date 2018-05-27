@@ -5,44 +5,44 @@ sensitivity(0.5).
 
 /* Initial goals */
 !initialize.
-/* Plans */
 
+/* Plans */
++!initialize
+    <- 	!initializePotential;
+	   	!initializeCosts;
+		!initializeProduction;
+		!findTrader.
+	   
++!initializePotential // 100 - 1000
+	<-	.random(R);
+	   	Potential = 900 * R + 100;
+		+potential(Potential).
+	   
++!initializeCosts // 5-15
+	<- 	.random(R);
+	   	Cost = 10 * R + 5;
+		+costPerUnit(Cost).
+	   
++!initializeProduction : potential(P) // 0-potential
+	<- 	.random(R);
+	   	InitialProduction = P * R;
+		+production(InitialProduction).
+	  
 +!newDecision(Price) 
-    : production(P) & costPerUnit(UnitCost)
-	& sensitivity(S) & potential(Potential) & trader(Trader)
-	<- if (Price < UnitCost) {
-	       NewProduction = P * S;
-	   } else {
-	       NewProduction = P + S * (Potential- P);
-	   }
-	   -+production(NewProduction)
-	   .print("newProduction", NewProduction);
-	   .send(logger, achieve, logProduction(NewProduction, Potential));
-	   .send(Trader, tell, energyNeeds(-NewProduction)).
+    : 	production(P) & costPerUnit(UnitCost)
+	& 	sensitivity(S) & potential(Potential) & trader(Trader)
+	<- 	if (Price < UnitCost) {
+			NewProduction = P * S;
+		} else {
+			NewProduction = P + S * (Potential- P);
+		}
+		-+production(NewProduction)
+		.print("newProduction", NewProduction);
+		.send(logger, achieve, logProduction(NewProduction, Potential));
+		.send(Trader, tell, energyNeeds(-NewProduction)).
 	
 
 +!findTrader
-	<- .my_name(Me);
-	   .send(tradersProvider, tell, prosumer(Me)).
+	<- 	.my_name(Me);
+	   	.send(tradersProvider, tell, prosumer(Me)).
 
-+!initialize
-    <- !initializePotential;
-	   !initializeCosts;
-	   !initializeProduction;
-	   !findTrader.
-	   
-	   
-+!initializePotential // 100 - 1000
-	<- .random(R);
-	   Potential = 900 * R + 100;
-	   +potential(Potential).
-	   
-+!initializeCosts // 5-15
-	<- .random(R);
-	   Cost = 10 * R + 5;
-	   +costPerUnit(Cost).
-	   
-+!initializeProduction : potential(P) // 0-potential
-	<- .random(R);
-	   InitialProduction = P * R;
-	   +production(InitialProduction).

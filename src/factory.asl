@@ -5,43 +5,43 @@ sensitivity(0.5).
 
 /* Initial goals */
 !initialize.
-/* Plans */
 
+/* Plans */
++!initialize
+    <- 	!initializePotential;
+	   	!initializeProfits;
+		!initializeConsumption;
+		!findTrader.
+	   	   
++!initializePotential // 10 - 200
+	<- 	.random(R);
+	   	Potential = (190 * R) + 10;
+		+potential(Potential).
+	   
++!initializeProfits // 5-15 Willingness to pay
+	<- 	.random(R);
+	   	Cost = 10 * R + 5;
+		+profitPerUnit(Cost).
+	   
++!initializeConsumption : potential(P) // 0-potential
+	<- 	.random(R);
+	   	InitialConsumption = P * R;
+		+consumption(InitialConsumption).
+	   
 +!newDecision(Price) 
-    : consumption(C) & profitPerUnit(UnitProfit)
-	& sensitivity(S) & potential(Potential) & trader(Trader)
-	<- if (Price > UnitProfit) {
-	       NewProduction = C * S;
-	   } else {
-	       NewProduction = C + S *(Potential- C);
-	   }
-	   .print("factory");
-	   .send(logger, achieve, logNeed(NewProduction));
-	   .send(Trader, tell, energyNeeds(NewProduction)).
+	: 	consumption(C) & profitPerUnit(UnitProfit)	& sensitivity(S) & potential(Potential) & trader(Trader)
+	<-	if (Price > UnitProfit) {
+	       	NewProduction = C * S;
+		} else {
+			NewProduction = C + S *(Potential- C);
+		}
+		.print("factory");
+		.send(logger, achieve, logNeed(NewProduction));
+		.send(Trader, tell, energyNeeds(NewProduction)).
 	
 
 +!findTrader
-	<- .my_name(Me);
-	   .send(tradersProvider, tell, prosumer(Me)).
+	<- 	.my_name(Me);
+	   	.send(tradersProvider, tell, prosumer(Me)).
 
-+!initialize
-    <- !initializePotential;
-	   !initializeProfits;
-	   !initializeConsumption;
-	   !findTrader.
-	   
-	   
-+!initializePotential // 10 - 200
-	<- .random(R);
-	   Potential = (190 * R) + 10;
-	   +potential(Potential).
-	   
-+!initializeProfits // 5-15 Willingness to pay
-	<- .random(R);
-	   Cost = 10 * R + 5;
-	   +profitPerUnit(Cost).
-	   
-+!initializeConsumption : potential(P) // 0-potential
-	<- .random(R);
-	   InitialConsumption = P * R;
-	   +consumption(InitialConsumption).
+

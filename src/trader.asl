@@ -5,19 +5,21 @@ managers([]).
 energyNeeded(0).
 currentBalance(0).
 head([H|T],Head) :- Head = H.
+
 /* Initial goals */
 !findProsumer.	
-/* Plans */
 
-+manager(M) : managers(Managers) <- 
-    -+managers([M|Managers]).
+/* Plans */
++manager(M) 
+	: 	managers(Managers) 
+	<- 	-+managers([M|Managers]).
 	
 +!findProsumer
-	<- .my_name(Me);
-	   .send(tradersProvider, tell, trader(Me)).
+	<- 	.my_name(Me);
+	   	.send(tradersProvider, tell, trader(Me)).
 	                          
 +!trade
-	: energyNeeded(E) & currentBalance(B) & managers(Managers) 
+	: 	energyNeeded(E) & currentBalance(B) & managers(Managers) 
 	<- 	.my_name(Me);
 	    .shuffle(Managers, Shuffled);
 		?head(Shuffled, H);
@@ -31,8 +33,8 @@ head([H|T],Head) :- Head = H.
 		}.
 
 +!acceptTrade(E_traded) 
-	: currentBalance(B) & energyNeeded(E) 
-	<- //.print("I traded ", E_traded," amount of energy");
+	: 	currentBalance(B) & energyNeeded(E) 
+	<- 	//.print("I traded ", E_traded," amount of energy");
 		-+currentBalance(B + E_traded); // -+ necessary
 		.my_name(Me); 
 		if(E == B ) {      
@@ -42,13 +44,13 @@ head([H|T],Head) :- Head = H.
 		}.
 
 +newTurn(Price)
-    : prosumer(Who) 
+    : 	prosumer(Who) 
 	<-  .send(Who, achieve, newDecision(Price));
 		-newTurn(Price)[source(logger)].
 	
 +energyNeeds(E) : prosumer(Who)  
-   <- -+energyNeeded(E);
-      -+currentBalance(0);
-	  -energyNeeds(E)[source(Who)];
-	  !trade.
+	<-	-+energyNeeded(E);
+      	-+currentBalance(0);
+		-energyNeeds(E)[source(Who)];
+		!trade.
 	
