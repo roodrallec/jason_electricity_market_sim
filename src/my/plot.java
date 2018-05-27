@@ -25,16 +25,16 @@ public class plot extends DefaultInternalAction {
     static DefaultXYDataset dataset = new DefaultXYDataset();
     static {
         JFreeChart xyc = ChartFactory.createXYLineChart(
-                             "Players' score",
-                             "step",
-                             "score",
+                             "Network efficiency",
+                             "Turn",
+                             "Efficiency",
                              dataset, // dataset,
                              PlotOrientation.VERTICAL, // orientation,
                              true, // legend,
                              true, // tooltips,
                              true); // urls
 
-        JFrame frame = new ChartFrame("Iterated Prisioners Dilemma", xyc);
+        JFrame frame = new ChartFrame("Electricity Market Simulation", xyc);
         frame.setSize(800,500);
         frame.setVisible(true);
     }
