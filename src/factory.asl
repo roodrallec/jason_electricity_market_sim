@@ -27,7 +27,11 @@ sensitivity(0.5).
 	<- 	.random(R);
 	   	InitialConsumption = P * R;
 		+consumption(InitialConsumption).
-	   
+
++!findTrader
+	<- 	.my_name(Me);
+	   	.send(trader_profiler, achieve, prosumer(Me)).
+		
 +!newDecision(Price) 
 	: 	consumption(C) & profitPerUnit(UnitProfit)	& sensitivity(S) & potential(Potential) & trader(Trader)
 	<-	if (Price > UnitProfit) {
@@ -40,8 +44,6 @@ sensitivity(0.5).
 		.send(Trader, tell, energyNeeds(NewProduction)).
 	
 
-+!findTrader
-	<- 	.my_name(Me);
-	   	.send(trader_profiler, achieve, prosumer(Me)).
+
 
 

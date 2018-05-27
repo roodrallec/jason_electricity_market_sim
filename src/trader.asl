@@ -1,36 +1,29 @@
 // Agent buyer in project electricity_market.mas2j
 
 /* Initial beliefs and rules */
-managers([]).
 energyNeeded(0).
 currentBalance(0).
 head([H|T],Head) :- Head = H.
 
-
 /* Initial goals */
-!findProsumer.	
+!findProsumer.
 
-/* Plans */
-+manager(M) 
-	: 	managers(Managers) 
-	<- 	-+managers([M|Managers]).
-	
+/* Plans */	
 +!findProsumer
 	<- 	.my_name(Me);
 	   	.send(trader_profiler, achieve, trader(Me)).
 	                          
 +!trade
-	: 	energyNeeded(E) & currentBalance(B) & managers(Managers) 
-	<- 	.my_name(Me);
-	    .shuffle(Managers, Shuffled);
-		?head(Shuffled, H);
-	    .print("I need ", E," amount of energy balance:", B);
-        .print("Requesting trade from manager ", H);
+	: 	energyNeeded(E) & currentBalance(B) & prosumer(P, X)
+	<- 	.my_name(Me);	    
+        .print("Requesting trade from regulator for prosumer ", P, " at pos ", X);
 		if(E > 0 & E - B > 0) {      
-		    .send(H, achieve, buyer(Me, E - B));
+			.print("Buying ", E-B, " units")
+		    .send(network_regulator, achieve, buyer(Me, E - B, X));
 		}
 		if(E < 0 & B - E > 0) {      
-		    .send(H, achieve, seller(Me, B - E));
+			.print("Selling ", B-E, " units")
+		    .send(network_regulator, achieve, seller(Me, B - E, X));
 		}.
 
 +!acceptTrade(E_traded) 
@@ -44,13 +37,14 @@ head([H|T],Head) :- Head = H.
 		  	!trade;
 		}.
 
-+!newTurn(Price)
-    : 	prosumer(Who) 
-	<-  .send(Who, achieve, newDecision(Price)).
++!priceUpdate(Price)
+    : 	prosumer(P, X) 
+	<-  .send(P, achieve, newDecision(Price)).
 	
-+energyNeeds(E) : prosumer(Who)  
++energyNeeds(E) 
+	: prosumer(P, X)  
 	<-	-+energyNeeded(E);
       	-+currentBalance(0);
-		-energyNeeds(E)[source(Who)];
+		-energyNeeds(E)[source(P)];
 		!trade.
 	

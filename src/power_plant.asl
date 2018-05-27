@@ -27,7 +27,11 @@ sensitivity(0.5).
 	<- 	.random(R);
 	   	InitialProduction = P * R;
 		+production(InitialProduction).
-	  
+
++!findTrader
+	<- 	.my_name(Me);
+	   	.send(trader_profiler, achieve, prosumer(Me)).
+		
 +!newDecision(Price) 
     : 	production(P) & costPerUnit(UnitCost)
 	& 	sensitivity(S) & potential(Potential) & trader(Trader)
@@ -38,11 +42,10 @@ sensitivity(0.5).
 		}
 		-+production(NewProduction)
 		.print("newProduction", NewProduction);
-		.send(logger, achieve, logProduction(NewProduction, Potential));
+		.send(logger, achieve, logProduction(NewProduction));
+		.send(logger, achieve, logPotential(Potential));
 		.send(Trader, tell, energyNeeds(-NewProduction)).
 	
 
-+!findTrader
-	<- 	.my_name(Me);
-	   	.send(trader_profiler, achieve, prosumer(Me)).
+
 

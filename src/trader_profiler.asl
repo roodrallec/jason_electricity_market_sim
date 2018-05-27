@@ -9,14 +9,14 @@ prosumer_id(0).
 !pairing_countdown.
 
 +!pairing_countdown 
-	<-	.wait(3000);
-		.send(logger, achieve, makeNewTurn).
+	<-	.wait(1500);
+		.send(logger, achieve, simulate).
 
 +!trader(T) 
-	: 	prosumer(P, Id)
+	: 	prosumer(P, Id) & .random(D)
 	<- 	-prosumer(P, Id);		
 		.print("Pairing trader ", T, " with prosumer ", P);
-		.send(T, tell, prosumer(P));   
+		.send(T, tell, prosumer(P, D));	
 		.send(P, tell, trader(T)).		
 
 +!trader(T) 
