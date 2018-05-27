@@ -7,16 +7,15 @@ sensitivity(0.5).
 !initialize.
 /* Plans */
 
-+newDecision(Turn, Price) 
++!newDecision(Price) 
     :  needs(Need) & trader(Trader)
 	<- 
 	   if (Need > 0) {
-	       .send(logger, tell, need(Need));
+	       .send(logger, achieve, logNeed(Need));
 	   } else {
-	       .send(logger, tell, produced(-Need, -Need));
+	       .send(logger, achieve, logProduction(-Need, -Need));
 	   }
-	   .send(Trader, tell, energyNeeds(Need));
-	   -newDecision(Price)[source(Trader)].
+	   .send(Trader, tell, energyNeeds(Need)).
 
 +!findTrader
 	<- .my_name(Me);

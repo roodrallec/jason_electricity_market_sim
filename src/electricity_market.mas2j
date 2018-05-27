@@ -8,7 +8,7 @@ MAS electricity_market {
 	
 	   tradersProvider#1;
 	
-	    network_manager#10;
+	    network_manager#1;
 
         trader#100;
 
