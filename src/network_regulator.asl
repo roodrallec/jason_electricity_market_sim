@@ -1,11 +1,12 @@
 // Agent network_regulator in project electricity_market.mas2j
 
 /* Initial beliefs and rules */
-transaction_cap(50).
-loss_per_distance(0.01).
+transaction_cap(500).
+loss_constant(0.1).
 price(10).
 buyer_id(0).
 adjustPrice(OldPrice, Production, Consumption, NewPrice) :- NewPrice = OldPrice.
+applyLoss(Amount, Distance, Loss, ReducedAmount) :- ReducedAmount = Loss * Amount / ((Distance*Distance)/Distance).
 
 /* Initial goals */
 +!setPrice(OldPrice, Production, Consumption)
@@ -16,13 +17,14 @@ adjustPrice(OldPrice, Production, Consumption, NewPrice) :- NewPrice = OldPrice.
 		.broadcast(achieve, priceUpdate(NewPrice)).
 		
 +!seller(Seller, E_selling, X_seller)
-	: 	buyer(Buyer, Id, E_buying, X_buyer) & transaction_cap(Cap) 
+	: 	buyer(Buyer, Id, E_buying, X_buyer) & transaction_cap(Cap) & loss_constant(L) 
 	<-	-seller(Seller, E_selling, X_seller);
 		.min([E_selling, E_buying, Cap], AgreedAmount);
-		.print("Allowing ", Seller, " to sell to ", Buyer);
-		.send(Buyer, achieve, acceptTrade(AgreedAmount));
-		.send(Seller, achieve, acceptTrade(-AgreedAmount));
-		.send(simulator, achieve, logTrade(S_agent, B_agent, AgreedAmount)).		
+		?applyLoss(AgreedAmount, X_seller - X_buyer, L, ReducedAmount);
+		.print("Allowing ", Seller, " to sell to ", Buyer, " amount ", ReducedAmount);
+		.send(Buyer, achieve, acceptTrade(ReducedAmount));
+		.send(Seller, achieve, acceptTrade(-ReducedAmount));
+		.send(simulator, achieve, logTrade(S_agent, B_agent, ReducedAmount)).		
 		
 +!seller(S, E_selling, X_seller) 
 	<- 	.print("No buyers for seller ", S);    
