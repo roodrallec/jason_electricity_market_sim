@@ -700,3 +700,42 @@ intention 493:
 [powerPlant1] newProduction78.4738789983158
 [factory8] factory
 [factory6] factory
+[logger] produced: 395.8489778602498 potential 1778.6550685418038
+[logger] consumed: 307.991202320627 need 468.2113844048122
+[logger] new turn begins 2
+[powerPlant1] newProduction39.2369394991579
+[powerPlant2] newProduction110.95946501876514
+[factory1] factory
+[factory7] factory
+[factory6] factory
+[factory8] factory
+[factory3] factory
+[logger] produced: 245.65257334232678 potential 1778.6550685418035
+[logger] consumed: 204.40165157002966 need 468.2113844048121
+[logger] new turn begins 3
+[powerPlant1] newProduction19.61846974957895
+[powerPlant2] newProduction55.47973250938257
+[factory7] factory
+[factory6] factory
+[factory8] factory
+[factory3] factory
+[factory1] factory
+[trader75] I trader75 am happy now, I have enough energy
+[trader73] I trader73 am happy now, I have enough energy
+[trader38] I trader38 am happy now, I have enough energy
+[trader19] I trader19 am happy now, I have enough energy
+[trader15] I trader15 am happy now, I have enough energy
+[trader65] I trader65 am happy now, I have enough energy
+[logger] produced: 170.55437108336523 potential 1778.6550685418038
+[logger] consumed: 156.83591185461685 need 468.2113844048121
+[logger] new turn begins 4
+[powerPlant1] newProduction9.809234874789475
+[factory1] factory
+[factory7] factory
+[factory6] factory
+[factory3] factory
+[powerPlant2] newProduction27.739866254691286
+[factory8] factory
+[trader42] I trader42 am happy now, I have enough energy
+[trader46] I trader46 am happy now, I have enough energy
+[trader30] I trader30 am happy now, I have enough energy
