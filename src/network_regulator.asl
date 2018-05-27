@@ -14,7 +14,7 @@ adjustPrice(OldPrice, Production, Consumption, NewPrice) :- NewPrice = OldPrice.
 		.abolish(buyer(_, _, _));
 	    .abolish(seller(_, _, _));
 		.broadcast(achieve, priceUpdate(NewPrice)).
-
+		
 +!seller(Seller, E_selling, X_seller)
 	: 	buyer(Buyer, Id, E_buying, X_buyer) & transaction_cap(Cap) 
 	<-	-seller(Seller, E_selling, X_seller);

@@ -23,7 +23,7 @@ sensitivity(0.5).
 +!newDecision(Price) 
     :  	needs(Need) & trader(Trader)
 	<- 	if (Need > 0) {
-			.send(logger, achieve, logNeed(Need));
+			.send(simulator, achieve, logNeed(Need));
 		} else {
 			.send(simulator, achieve, logProduction(-Need));
 			.send(simulator, achieve, logPotential(-Need));

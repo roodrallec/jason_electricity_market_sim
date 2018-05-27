@@ -31,7 +31,7 @@ trades([]).
 		!simulate.		
 		
 +!priceUpdate(Price)
-	<- 	-+price(T, Price).		
+	<- 	-+price(Price).		
 		
 +!logProduction(Amount) 
 	: 	production(A)
