@@ -34,6 +34,7 @@ adjustPrice(OldPrice, Production, Consumption, NewPrice) :- NewPrice = OldPrice.
 	    .print("produced: ", A, " potential ", P);
 		.print("consumed: ", C, " need ", N);
 	    .print("new turn begins ", T + 1);
+		my.plot(T,A - C);
 	    +trades(T+1, []);
 	    +production(T+1, 0, 0);
 	    +consumption(T+1, 0);
