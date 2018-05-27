@@ -6,6 +6,7 @@ energyNeeded(0).
 currentBalance(0).
 head([H|T],Head) :- Head = H.
 
+
 /* Initial goals */
 !findProsumer.	
 
@@ -16,7 +17,7 @@ head([H|T],Head) :- Head = H.
 	
 +!findProsumer
 	<- 	.my_name(Me);
-	   	.send(tradersProvider, tell, trader(Me)).
+	   	.send(trader_profiler, achieve, trader(Me)).
 	                          
 +!trade
 	: 	energyNeeded(E) & currentBalance(B) & managers(Managers) 
@@ -38,15 +39,14 @@ head([H|T],Head) :- Head = H.
 		-+currentBalance(B + E_traded); // -+ necessary
 		.my_name(Me); 
 		if(E == B ) {      
-		    .print("I ", Me," am happy now, I have enough energy");
+			.print("I ", Me," am happy now, I have enough energy");
 		} else {
-		  !trade;
+		  	!trade;
 		}.
 
-+newTurn(Price)
++!newTurn(Price)
     : 	prosumer(Who) 
-	<-  .send(Who, achieve, newDecision(Price));
-		-newTurn(Price)[source(logger)].
+	<-  .send(Who, achieve, newDecision(Price)).
 	
 +energyNeeds(E) : prosumer(Who)  
 	<-	-+energyNeeded(E);

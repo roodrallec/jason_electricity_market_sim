@@ -5,6 +5,7 @@ import jason.asSemantics.TransitionSystem;
 import jason.asSemantics.Unifier;
 import jason.asSyntax.NumberTerm;
 import jason.asSyntax.Term;
+import jason.asSyntax.StringTerm;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -41,17 +42,18 @@ public class plot extends DefaultInternalAction {
 
     @Override
     public Object execute(final TransitionSystem ts, final Unifier un, final Term[] args) throws Exception {
-        int step  = (int)((NumberTerm)args[0]).solve();
-        int score = (int)((NumberTerm)args[1]).solve();
-        addValue(ts.getUserAgArch().getAgName(), step, score);
+        String series  = (String) ((StringTerm)args[0]).getString();
+        int step = (int)((NumberTerm)args[1]).solve();
+		int score = (int)((NumberTerm)args[2]).solve();
+        addValue(series, step, score);
         return true;
     }
 
-    void addValue(String agName, int step, int vl) {
+    void addValue(String series, int step, int vl) {
         values.put(step,vl);
         double[][] data = getData(step);
         synchronized (dataset) {
-            dataset.addSeries(agName, data);
+            dataset.addSeries(series, data);
         }
     }
 

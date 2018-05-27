@@ -7,10 +7,7 @@ production(0, 0, 0).
 consumption(0, 0).
 needs(0, 0).
 trades(0,[]).
-adjustPrice(OldPrice, Production, Consumption, NewPrice) :- NewPrice = OldPrice.	
-
-/* Initial goals */
-!makeNewTurn.
+adjustPrice(OldPrice, Production, Consumption, NewPrice) :- NewPrice = OldPrice.
 
 /* Plans */
 +!logProduction(Amount, Potential) 
@@ -25,22 +22,27 @@ adjustPrice(OldPrice, Production, Consumption, NewPrice) :- NewPrice = OldPrice.
 	   
 +!logTrade(Seller, Buyer, Amount) 
     : 	turn(T) & trades(T, List) & consumption(T, C)
-	<- 	-+trades(T, [[Seller, Buyer, Amount]|List]);
+	<- 	-+consumption(T, C + Amount);
 		//.print("logTrade", Amount , C);
-		-+consumption(T, C + Amount).
+		-+trades(T, [[Seller, Buyer, Amount]|List]).
 
 +!makeNewTurn
-	: 	turn(T) & price(T, OldPrice) & production(T, A, P) & consumption(T, C) & needs(T, N)        
-	<-	+trades(T+1, []);
+	: 	turn(T) & price(T, OldPrice) & production(T, A, P) & consumption(T, C) 
+	& needs(T, N)        
+	<-	.print("######## NEW TURN ########");
+		+trades(T+1, []);
 	    +production(T+1, 0, 0);
 	    +consumption(T+1, 0);
 		+needs(T+1, 0);
 	    -+turn(T+1);
 		?adjustPrice(OldPrice, P, C, Price);
 		+price(T+1, Price);
-		.broadcast(tell, newTurn(Price));
-		.wait(1000);
-		my.plot(T,A - C);
+		.broadcast(achieve, newTurn(Price));
+		.wait(1000);		
+		my.plot("Potential", T, P);
+		my.plot("Produced", T, A);
+		my.plot("Consumed", T, C);
+		my.plot("Need", T, N);
 		.print("produced: ", A, " potential ", P);
 		.print("consumed: ", C, " need ", N);
 	    .print("new turn begins ", T + 1);		

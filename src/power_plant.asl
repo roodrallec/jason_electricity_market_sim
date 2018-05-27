@@ -44,5 +44,5 @@ sensitivity(0.5).
 
 +!findTrader
 	<- 	.my_name(Me);
-	   	.send(tradersProvider, tell, prosumer(Me)).
+	   	.send(trader_profiler, achieve, prosumer(Me)).
 

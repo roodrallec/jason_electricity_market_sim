@@ -1,4 +1,4 @@
-// Agent network_manager in project electricity_market.mas2j
+// Agent network_regulator in project electricity_market.mas2j
 
 /* Initial beliefs and rules */
 transaction_cap(50).
@@ -51,31 +51,11 @@ bact(0).
 		-newTurn(Price)[source(logger)].
 	
 +!pair(B_agent, S_agent, E_buying, E_selling) 
+	:	transaction_cap(C)
 	<-	//.print("pairing buyer agent ", B_agent, " with seller agent ", S_agent);
 		//.print("pairing buyer agent ",B_agent,"  ", E_buying, " with seller agent ",S_agent,"  ", E_selling);
-		.min([E_selling, E_buying], AgreedAmount);
+		.min([E_selling, E_buying, C], AgreedAmount);
 		//.print("They agree on amount ", AgreedAmount);
 		.send(B_agent, achieve, acceptTrade(AgreedAmount));
 		.send(S_agent, achieve, acceptTrade(-AgreedAmount));
 		.send(logger, achieve, logTrade(S_agent, B_agent, AgreedAmount)).
-	
-+!pairBuyer(S_agent, N)
-	:	true 
-	<- 	true.
-	
-+!pairSeller(S_agent, N) 
-	: 	buyer(B_agent, E_buying, N) & seller(S_agent, E_selling, A) & bact(B)  
-	<-	-+bact(B+1);
-		//.print("pairing buyer agent ", B_agent, " with seller agent ", S_agent);
-		.print("pairing buyer agent ",B_agent,"  ", E_buying, " with seller agent ",S_agent,"  ", E_selling);
-		.min([E_selling, E_buying], AgreedAmount);
-		.print("They agree on amount ", AgreedAmount);
-		-buyer(B_agent, E_buying, N);
-		-seller(S_agent, E_selling, A);
-		.send(B_agent, achieve, acceptTrade(AgreedAmount));
-		.send(A, achieve, acceptTrade(-AgreedAmount));
-		.send(logger, achieve, logTrade(S_agent, B_agent, AgreedAmount)).
-	
-+!pairSeller(S_agent, N)
-	:	true 
-	<- 	true.
