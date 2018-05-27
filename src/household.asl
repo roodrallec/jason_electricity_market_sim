@@ -1,8 +1,5 @@
 // Agent buyer in project electricity_market.mas2j
 
-/* Initial beliefs and rules */
-sensitivity(0.5).
-
 /* Initial goals */
 !initialize.
 
@@ -13,7 +10,7 @@ sensitivity(0.5).
 	   
 +!initializeNeeds // -5 - 5
 	<- 	.random(R);
-	   	Need = 10 * R - 5;
+	   	Need = math.round(10 * R - 5);
 		+needs(Need).
 
 +!findTrader

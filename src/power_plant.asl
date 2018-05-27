@@ -15,17 +15,17 @@ sensitivity(0.5).
 	   
 +!initializePotential // 100 - 1000
 	<-	.random(R);
-	   	Potential = 900 * R + 100;
+	   	Potential = math.round(900 * R + 100);
 		+potential(Potential).
 	   
 +!initializeCosts // 5-15
 	<- 	.random(R);
-	   	Cost = 10 * R + 5;
+	   	Cost = math.round(10 * R + 5);
 		+costPerUnit(Cost).
 	   
 +!initializeProduction : potential(P) // 0-potential
 	<- 	.random(R);
-	   	InitialProduction = P * R;
+	   	InitialProduction = math.round(P * R);
 		+production(InitialProduction).
 
 +!findTrader
@@ -36,9 +36,9 @@ sensitivity(0.5).
     : 	production(P) & costPerUnit(UnitCost)
 	& 	sensitivity(S) & potential(Potential) & trader(Trader)
 	<- 	if (Price < UnitCost) {
-			NewProduction = P * S;
+			NewProduction = math.round(P * S);
 		} else {
-			NewProduction = P + S * (Potential- P);
+			NewProduction = math.round(P + S * (Potential- P));
 		}
 		-+production(NewProduction)
 		.print("newProduction", NewProduction);

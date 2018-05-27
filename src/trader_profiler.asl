@@ -4,7 +4,6 @@
 	
 /* Initial goals */
 prosumer_id(0).
-
 /* Plans */
 !pairing_countdown.
 
@@ -16,7 +15,7 @@ prosumer_id(0).
 	: 	prosumer(P, Id) & .random(D)
 	<- 	-prosumer(P, Id);		
 		.print("Pairing trader ", T, " with prosumer ", P);
-		.send(T, tell, prosumer(P, D));	
+		.send(T, tell, prosumer(P, math.round(D*1000)));	
 		.send(P, tell, trader(T)).		
 
 +!trader(T) 

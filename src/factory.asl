@@ -15,17 +15,17 @@ sensitivity(0.5).
 	   	   
 +!initializePotential // 10 - 200
 	<- 	.random(R);
-	   	Potential = (190 * R) + 10;
+	   	Potential = math.round((190 * R) + 10);
 		+potential(Potential).
 	   
 +!initializeProfits // 5-15 Willingness to pay
 	<- 	.random(R);
-	   	Cost = 10 * R + 5;
+	   	Cost = math.round(10 * R + 5);
 		+profitPerUnit(Cost).
 	   
 +!initializeConsumption : potential(P) // 0-potential
 	<- 	.random(R);
-	   	InitialConsumption = P * R;
+	   	InitialConsumption = math.round(P * R);
 		+consumption(InitialConsumption).
 
 +!findTrader
