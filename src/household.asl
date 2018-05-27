@@ -25,8 +25,8 @@ sensitivity(0.5).
 	<- 	if (Need > 0) {
 			.send(logger, achieve, logNeed(Need));
 		} else {
-			.send(logger, achieve, logProduction(-Need));
-			.send(logger, achieve, logPotential(-Need));
+			.send(simulator, achieve, logProduction(-Need));
+			.send(simulator, achieve, logPotential(-Need));
 		}
 		.send(Trader, tell, energyNeeds(Need)).
 	   

@@ -40,7 +40,7 @@ sensitivity(0.5).
 			NewProduction = C + S *(Potential- C);
 		}
 		.print("factory");
-		.send(logger, achieve, logNeed(NewProduction));
+		.send(simulator, achieve, logNeed(NewProduction));
 		.send(Trader, tell, energyNeeds(NewProduction)).
 	
 

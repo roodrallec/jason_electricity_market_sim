@@ -6,7 +6,7 @@ MAS electricity_market {
 	
 	executionControl: jason.control.ExecutionControl
 
-    agents:  	logger#1;  
+    agents:  	simulator#1;  
 	
 	   			trader_profiler#1;
 	

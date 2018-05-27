@@ -22,7 +22,7 @@ adjustPrice(OldPrice, Production, Consumption, NewPrice) :- NewPrice = OldPrice.
 		.print("Allowing ", Seller, " to sell to ", Buyer);
 		.send(Buyer, achieve, acceptTrade(AgreedAmount));
 		.send(Seller, achieve, acceptTrade(-AgreedAmount));
-		.send(logger, achieve, logTrade(S_agent, B_agent, AgreedAmount)).		
+		.send(simulator, achieve, logTrade(S_agent, B_agent, AgreedAmount)).		
 		
 +!seller(S, E_selling, X_seller) 
 	<- 	.print("No buyers for seller ", S);    

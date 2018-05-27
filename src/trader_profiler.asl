@@ -10,7 +10,7 @@ prosumer_id(0).
 
 +!pairing_countdown 
 	<-	.wait(1500);
-		.send(logger, achieve, simulate).
+		.send(simulator, achieve, simulate).
 
 +!trader(T) 
 	: 	prosumer(P, Id) & .random(D)
