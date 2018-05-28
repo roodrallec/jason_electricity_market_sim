@@ -5,7 +5,7 @@ transaction_cap(500).
 loss_constant(0).
 price(10).
 buyer_id(0).
-adjustPrice(OldPrice, Production, Consumption, NewPrice) :- NewPrice = OldPrice.
+adjustPrice(OldPrice, Production, Consumption, NewPrice) :- NewPrice = OldPrice * ((Consumption +1)/(Production+1)).
 applyLoss(Amount, Distance, LossConstant, Loss) :- Loss = math.round(LossConstant * Amount / Distance).
 absoluteDistance(X_1, X_2, Distance) :- Distance = math.round(math.sqrt((X_1 - X_2) * (X_1 - X_2))). 
 

@@ -12,13 +12,13 @@ MAS electricity_market {
 	
 				network_regulator#1;
 
-				trader#3;
+				trader#100;
 
-				power_plant#1;
+				power_plant#5;
 		
-				factory#1;
+				factory#10;
 		
-				household#1;
+				household#85;
 		
 		
 		
