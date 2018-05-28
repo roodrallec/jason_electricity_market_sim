@@ -20,7 +20,7 @@ consumption - needs which are met
 oldPrice:
 - prices never change
 - random energy requirements household(either consumer or producer)
-- powerplant: random cost per unit
+- power-plant: random cost per unit
 - factory: random profit per unit
 
 rename:
@@ -28,6 +28,8 @@ rename:
 -begin Begin Simulation Step
 -buy/sell -> trade
 
--make 
+-make household consumption change?
+-bug? plot is not remembering
+-make randomness explicit
 
 

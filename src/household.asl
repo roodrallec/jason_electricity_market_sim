@@ -7,17 +7,18 @@
 +!initialize
     <- !initializeNeeds;
 	   !findTrader.
-	   
+
 +!initializeNeeds // -5 - 5
-	<- 	.random(R);
-	   	Need = math.round(10 * R - 5);
+//randomness here
+	// <- 	.random(R);
+  <-   Need = 3;
 		+needs(Need).
 
 +!findTrader
 	<- 	.my_name(Me);
 	   	.send(trader_profiler, achieve, prosumer(Me)).
-	   
-+!newDecision(Price) 
+
++!newDecision(Price)
     :  	needs(Need) & trader(Trader)
 	<- 	if (Need > 0) {
 			.send(simulator, achieve, logNeed(Need));
@@ -26,4 +27,4 @@
 			.send(simulator, achieve, logPotential(-Need));
 		}
 		.send(Trader, tell, energyNeeds(Need)).
-	   
+
