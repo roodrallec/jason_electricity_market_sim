@@ -1,7 +1,7 @@
 // Agent buyer in project electricity_market.mas2j
 
 /* Initial beliefs and rules */
-sensitivity(0.5).
+sensitivity(0.2).
 
 /* Initial goals */
 !initialize.
@@ -13,9 +13,9 @@ sensitivity(0.5).
 		!initializeProduction;
 		!findTrader.
 	   
-+!initializePotential // 100 - 1000
++!initializePotential // 100 - 400
 	<-	.random(R);
-	   	Potential = math.round(900 * R + 100);
+	   	Potential = math.round(300 * R + 100);
 		+potential(Potential).
 	   
 +!initializeCosts // 5-15
@@ -36,9 +36,9 @@ sensitivity(0.5).
     : 	production(P) & costPerUnit(UnitCost)
 	& 	sensitivity(S) & potential(Potential) & trader(Trader)
 	<- 	if (Price < UnitCost) {
-			NewProduction = math.round(P * S);
+			NewProduction = P * (1 - S);
 		} else {
-			NewProduction = math.round(P + S * (Potential- P));
+			NewProduction = P + S * (Potential- P);
 		}
 		-+production(NewProduction)
 		.print("newProduction", NewProduction);

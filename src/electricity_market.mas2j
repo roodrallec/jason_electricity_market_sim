@@ -4,8 +4,6 @@ MAS electricity_market {
 
     infrastructure: Centralised
 	
-	executionControl: jason.control.ExecutionControl
-
     agents:  	simulator#1;  
 	
 	   			trader_profiler#1;

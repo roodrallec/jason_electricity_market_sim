@@ -25,8 +25,8 @@ trades([]).
 		-+consumption(0);
 		-+needs(0);
 		-+trades([]);
-		.send(network_regulator, achieve, setPrice(OldPrice, A, C));		
-		.wait(20000);
+		.send(network_regulator, achieve, setPrice(OldPrice, A, N));		
+		.wait(4000);
 		!simulate.		
 		
 +!priceUpdate(Price)

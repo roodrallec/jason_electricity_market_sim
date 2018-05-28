@@ -18,8 +18,10 @@
 	   	.send(trader_profiler, achieve, prosumer(Me)).
 	   
 +!newDecision(Price) 
-    :  	needs(Need) & trader(Trader)
-	<- 	if (Need > 0) {
+    :  	needs(N) & trader(Trader)
+	<- 	.random(R);
+		Need = N + 4 * (R - 0.5);
+		if (Need > 0) {
 			.send(simulator, achieve, logNeed(Need));
 		} else {
 			.send(simulator, achieve, logProduction(-Need));

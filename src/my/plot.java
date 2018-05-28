@@ -40,10 +40,10 @@ public class plot extends DefaultInternalAction {
         frame.setVisible(true);
 		
 		values.put("Production", new HashMap<Integer,Integer>());
-	values.put("Potential", new HashMap<Integer,Integer>());
-	values.put("Needs", new HashMap<Integer,Integer>());
-	values.put("Consumption", new HashMap<Integer,Integer>());
-	values.put("OldPrice", new HashMap<Integer,Integer>());
+		values.put("Potential", new HashMap<Integer,Integer>());
+		values.put("Needs", new HashMap<Integer,Integer>());
+		values.put("Consumption", new HashMap<Integer,Integer>());
+		values.put("OldPrice", new HashMap<Integer,Integer>());
     }
 
     @Override

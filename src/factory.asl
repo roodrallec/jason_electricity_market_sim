@@ -1,7 +1,7 @@
 // Agent buyer in project electricity_market.mas2j
 
 /* Initial beliefs and rules */
-sensitivity(0.5).
+sensitivity(0.2).
 
 /* Initial goals */
 !initialize.
@@ -35,7 +35,7 @@ sensitivity(0.5).
 +!newDecision(Price) 
 	: 	consumption(C) & profitPerUnit(UnitProfit)	& sensitivity(S) & potential(Potential) & trader(Trader)
 	<-	if (Price > UnitProfit) {
-	       	NewProduction = C * S;
+	       	NewProduction = C * (1 - S);
 		} else {
 			NewProduction = C + S *(Potential- C);
 		}
