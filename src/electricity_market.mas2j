@@ -3,20 +3,23 @@
 MAS electricity_market {
 
     infrastructure: Centralised
-
-    agents:  logger#1;  
 	
-	   tradersProvider#1;
+	executionControl: jason.control.ExecutionControl
+
+    agents:  	simulator#1;  
 	
-	    network_manager#1;
-
-        trader#100;
-
-        powerPlant#2;
+	   			trader_profiler#1;
+	
+				network_regulator#1;
+				
+				//amount of traders has to be equal to prosumers
+				trader#3;
+				
+				power_plant#1;
 		
-		factory#8;
+				factory#1;
 		
-		household#90;
+				household#1;
 		
 		
 		

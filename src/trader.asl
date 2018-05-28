@@ -1,54 +1,59 @@
 // Agent buyer in project electricity_market.mas2j
 
 /* Initial beliefs and rules */
-managers([]).
-energyNeeded(0).
-currentBalance(0).
-head([H|T],Head) :- Head = H.
-/* Initial goals */
-!findProsumer.	
-/* Plans */
+needsEnergy(0).
+hasEnergy(0).
 
-+manager(M) : managers(Managers) <- 
-    -+managers([M|Managers]).
-	
+/* Initial goals */
+!findProsumer.
+
+/* Plans */	
 +!findProsumer
-	<- .my_name(Me);
-	   .send(tradersProvider, tell, trader(Me)).
+	<- 	.my_name(Me);
+	   	.send(trader_profiler, achieve, trader(Me)).
 	                          
 +!trade
-	: energyNeeded(E) & currentBalance(B) & managers(Managers) 
-	<- 	.my_name(Me);
-	    .shuffle(Managers, Shuffled);
-		?head(Shuffled, H);
-	    //.print("I need ", E," amount of energy balance:", B);
-        //.print("Requesting trade from manager ", H);
-		if(E > 0 & E - B > 0) {      
-		    .send(H, achieve, buyer(Me, E - B));
+	: 	needsEnergy(N) & hasEnergy(H) & prosumer(P, X)
+	<- 	.my_name(Me);	    		
+		if (N > 0) {
+			.print("Trying to buy ", N, " units");
+			.send(network_regulator, achieve, buyer(Me, N, X));
 		}
-		if(E < 0 & B - E > 0) {      
-		    .send(H, achieve, seller(Me, B - E));
+		if (H > 0) {
+			.print("Trying to sell ", H, " units");
+			.send(network_regulator, achieve, seller(Me, H, X));
+		}
+		if (N == 0 & H == 0) {
+			.print("I traded all my energy");
 		}.
 
-+!acceptTrade(E_traded) 
-	: currentBalance(B) & energyNeeded(E) 
-	<- //.print("I traded ", E_traded," amount of energy");
-		-+currentBalance(B + E_traded); // -+ necessary
-		.my_name(Me); 
-		if(E == B ) {      
-		    .print("I ", Me," am happy now, I have enough energy");
-		} else {
-		  !trade;
-		}.
++!sold(E_traded)
+	:	hasEnergy(H)
+	<- 	.my_name(Me);
+		.print("I sold ", E_traded," amount of energy");
+		-+hasEnergy(H - E_traded);
+		!trade.
 
-+newTurn(Price)
-    : prosumer(Who) 
-	<-  .send(Who, achieve, newDecision(Price));
-		-newTurn(Price)[source(logger)].
++!bought(E_traded)
+	:	needsEnergy(N)
+	<- 	.my_name(Me);
+		.print("I sold ", E_traded," amount of energy");
+		-+needsEnergy(N - E_traded);
+		!trade.
+
++!priceUpdate(Price)
+    : 	prosumer(P, X) 
+	<-  .send(P, achieve, newDecision(Price)).
 	
-+energyNeeds(E) : prosumer(Who)  
-   <- -+energyNeeded(E);
-      -+currentBalance(0);
-	  -energyNeeds(E)[source(Who)];
-	  !trade.
++energyNeeds(E) 
+	: 	prosumer(P, X)  
+	<-	if(E > 0) {
+			-+needsEnergy(E);
+			-+hasEnergy(0);
+		}
+		if (E < 0) {
+			-+hasEnergy(math.round(math.sqrt(E*E)));
+			-+needsEnergy(0);
+		}		
+		!trade.
 	

@@ -14,7 +14,22 @@ by i.e.
 run jason-2.2a/jedit/jedit.jar
 
 
+potential - maximal possible production of the system
+needs - demand
+consumption - needs which are met
+oldPrice:
+- prices never change
+- random energy requirements household(either consumer or producer)
+- power-plant: random cost per unit
+- factory: random profit per unit
 
+rename:
+-trader?
+-begin Begin Simulation Step
+-buy/sell -> trade
 
+-make household consumption change?
+-bug? plot is not remembering
+-make randomness explicit
 
 
