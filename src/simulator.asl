@@ -18,16 +18,15 @@ trades([]).
 		my.plot("Production", T, A);
 		my.plot("Consumption", T, C);
 		my.plot("Needs", T, N);
-		my.plot("OldPrice", T, OldPrice); 
+		my.plot("OldPrice", T, OldPrice *10); 
 		-+turn(T + 1);
 	    -+production(0);
 		-+potential(0);	    
 		-+consumption(0);
 		-+needs(0);
 		-+trades([]);
-		-+price(10);
-		.send(network_regulator, achieve, setPrice(OldPrice, A, P));		
-		.wait(2000);
+		.send(network_regulator, achieve, setPrice(OldPrice, A, N));		
+		.wait(4000);
 		!simulate.		
 		
 +!priceUpdate(Price)

@@ -17,10 +17,19 @@
 +!findTrader
 	<- 	.my_name(Me);
 	   	.send(trader_profiler, achieve, prosumer(Me)).
+<<<<<<< HEAD
 
 +!newDecision(Price)
     :  	needs(Need) & trader(Trader)
 	<- 	if (Need > 0) {
+=======
+	   
++!newDecision(Price) 
+    :  	needs(N) & trader(Trader)
+	<- 	.random(R);
+		Need = N + 4 * (R - 0.5);
+		if (Need > 0) {
+>>>>>>> market_regulation
 			.send(simulator, achieve, logNeed(Need));
 		} else {
 			.send(simulator, achieve, logProduction(-Need));
