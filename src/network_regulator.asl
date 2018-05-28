@@ -3,7 +3,7 @@
 /* Initial beliefs and rules */
 
 //regulation
-transaction_cap(500).
+transaction_cap(200).
 
 //0 => perfect energy consumption
 loss_constant(0).
