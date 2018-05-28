@@ -12,17 +12,18 @@ sensitivity(0.5).
 	   	!initializeCosts;
 		!initializeProduction;
 		!findTrader.
-	   
+
 +!initializePotential // 100 - 1000
-	<-	.random(R);
-	   	Potential = math.round(900 * R + 100);
+	// <-	.random(R);
+	//    	Potential = math.round(900 * R + 100);
+  <-   Potential = 700;
 		+potential(Potential).
-	   
+
 +!initializeCosts // 5-15
 	<- 	.random(R);
 	   	Cost = math.round(10 * R + 5);
 		+costPerUnit(Cost).
-	   
+
 +!initializeProduction : potential(P) // 0-potential
 	<- 	.random(R);
 	   	InitialProduction = math.round(P * R);
@@ -31,8 +32,8 @@ sensitivity(0.5).
 +!findTrader
 	<- 	.my_name(Me);
 	   	.send(trader_profiler, achieve, prosumer(Me)).
-		
-+!newDecision(Price) 
+
++!newDecision(Price)
     : 	production(P) & costPerUnit(UnitCost)
 	& 	sensitivity(S) & potential(Potential) & trader(Trader)
 	<- 	if (Price < UnitCost) {
@@ -45,7 +46,7 @@ sensitivity(0.5).
 		.send(simulator, achieve, logProduction(NewProduction));
 		.send(simulator, achieve, logPotential(Potential));
 		.send(Trader, tell, energyNeeds(-NewProduction)).
-	
+
 
 
 
