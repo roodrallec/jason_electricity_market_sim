@@ -21,7 +21,7 @@ import org.jfree.data.xy.DefaultXYDataset;
 /** Plot a graph with the score of the players */
 public class plot extends DefaultInternalAction {
 
-    Map<Integer,Integer> values = new HashMap<Integer,Integer>();
+    static Map<String,HashMap<Integer,Integer>> values = new HashMap<String,HashMap<Integer,Integer>>();
 
     static DefaultXYDataset dataset = new DefaultXYDataset();
     static {
@@ -38,6 +38,12 @@ public class plot extends DefaultInternalAction {
         JFrame frame = new ChartFrame("Electricity Market Simulation", xyc);
         frame.setSize(800,500);
         frame.setVisible(true);
+		
+		values.put("Production", new HashMap<Integer,Integer>());
+		values.put("Potential", new HashMap<Integer,Integer>());
+		values.put("Needs", new HashMap<Integer,Integer>());
+		values.put("Consumption", new HashMap<Integer,Integer>());
+		values.put("OldPrice", new HashMap<Integer,Integer>());
     }
 
     @Override
@@ -50,19 +56,20 @@ public class plot extends DefaultInternalAction {
     }
 
     void addValue(String series, int step, int vl) {
-        values.put(step,vl);
-        double[][] data = getData(step);
+		HashMap<Integer,Integer> map = values.get(series);
+        map.put(step,vl);
+        double[][] data = getData(step, map);
         synchronized (dataset) {
             dataset.addSeries(series, data);
         }
     }
 
-    private double[][] getData(int maxStep) {
+    private double[][] getData(int maxStep, HashMap<Integer,Integer> map) {
         double[][] r = new double[2][maxStep+1];
         int vl = 0;
         for (int step = 0; step<=maxStep; step++) {
-            if (values.containsKey(step))
-                vl = values.get(step);
+            if (map.containsKey(step))
+                vl = map.get(step);
             r[0][step] = step;
             r[1][step] = vl;
         }

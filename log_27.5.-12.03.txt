@@ -1,0 +1,705 @@
+Jason Http Server running on http://192.168.0.36:3272
+[tradersProvider] No fail event was generated for +!pair(household58)[source(self)]
+[tradersProvider]
+intention 61:
+    +prosumer(household58)[source(household58)] <- ... !pair(Who) / {_20=trader6, Who=household58}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household58)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household59)[source(self)]
+[tradersProvider]
+intention 75:
+    +prosumer(household59)[source(household59)] <- ... !pair(Who) / {_20=trader9, Who=household59}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household59)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household56)[source(self)]
+[tradersProvider]
+intention 77:
+    +prosumer(household56)[source(household56)] <- ... !pair(Who) / {_20=trader8, Who=household56}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household56)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household57)[source(self)]
+[tradersProvider]
+intention 79:
+    +prosumer(household57)[source(household57)] <- ... !pair(Who) / {_20=trader8, Who=household57}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household57)[source(self)]
+[tradersProvider] pairing household57 and trader9
+[tradersProvider] No fail event was generated for +!pair(factory4)[source(self)]
+[tradersProvider]
+intention 80:
+    +prosumer(factory4)[source(factory4)] <- ... !pair(Who) / {_20=trader8, Who=factory4}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(factory4)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household61)[source(self)]
+[tradersProvider]
+intention 81:
+    +prosumer(household61)[source(household61)] <- ... !pair(Who) / {_20=trader8, Who=household61}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household61)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(factory5)[source(self)]
+[tradersProvider]
+intention 82:
+    +prosumer(factory5)[source(factory5)] <- ... !pair(Who) / {_20=trader8, Who=factory5}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(factory5)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household62)[source(self)]
+[tradersProvider]
+intention 83:
+    +prosumer(household62)[source(household62)] <- ... !pair(Who) / {_20=trader8, Who=household62}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household62)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(factory2)[source(self)]
+[tradersProvider]
+intention 84:
+    +prosumer(factory2)[source(factory2)] <- ... !pair(Who) / {_20=trader8, Who=factory2}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(factory2)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household60)[source(self)]
+[tradersProvider]
+intention 88:
+    +prosumer(household60)[source(household60)] <- ... !pair(Who) / {_20=trader8, Who=household60}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household60)[source(self)]
+[tradersProvider] pairing household60 and trader8
+[tradersProvider] No fail event was generated for +!pair(factory3)[source(self)]
+[tradersProvider]
+intention 89:
+    +prosumer(factory3)[source(factory3)] <- ... !pair(Who) / {_20=trader6, Who=factory3}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(factory3)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(factory8)[source(self)]
+[tradersProvider]
+intention 90:
+    +prosumer(factory8)[source(factory8)] <- ... !pair(Who) / {_20=trader6, Who=factory8}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(factory8)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household65)[source(self)]
+[tradersProvider]
+intention 91:
+    +prosumer(household65)[source(household65)] <- ... !pair(Who) / {_20=trader6, Who=household65}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household65)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household66)[source(self)]
+[tradersProvider]
+intention 92:
+    +prosumer(household66)[source(household66)] <- ... !pair(Who) / {_20=trader6, Who=household66}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household66)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(factory6)[source(self)]
+[tradersProvider]
+intention 94:
+    +prosumer(factory6)[source(factory6)] <- ... !pair(Who) / {_20=trader6, Who=factory6}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(factory6)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household63)[source(self)]
+[tradersProvider]
+intention 95:
+    +prosumer(household63)[source(household63)] <- ... !pair(Who) / {_20=trader6, Who=household63}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household63)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(factory7)[source(self)]
+[tradersProvider]
+intention 96:
+    +prosumer(factory7)[source(factory7)] <- ... !pair(Who) / {_20=trader6, Who=factory7}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(factory7)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household64)[source(self)]
+[tradersProvider]
+intention 97:
+    +prosumer(household64)[source(household64)] <- ... !pair(Who) / {_20=trader6, Who=household64}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household64)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household69)[source(self)]
+[tradersProvider]
+intention 98:
+    +prosumer(household69)[source(household69)] <- ... !pair(Who) / {_20=trader6, Who=household69}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household69)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household67)[source(self)]
+[tradersProvider]
+intention 99:
+    +prosumer(household67)[source(household67)] <- ... !pair(Who) / {_20=trader6, Who=household67}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household67)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household68)[source(self)]
+[tradersProvider]
+intention 100:
+    +prosumer(household68)[source(household68)] <- ... !pair(Who) / {_20=trader6, Who=household68}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household68)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(factory1)[source(self)]
+[tradersProvider]
+intention 101:
+    +prosumer(factory1)[source(factory1)] <- ... !pair(Who) / {_20=trader6, Who=factory1}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(factory1)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household72)[source(self)]
+[tradersProvider]
+intention 104:
+    +prosumer(household72)[source(household72)] <- ... !pair(Who) / {_20=trader6, Who=household72}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household72)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household73)[source(self)]
+[tradersProvider]
+intention 108:
+    +prosumer(household73)[source(household73)] <- ... !pair(Who) / {_20=trader6, Who=household73}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household73)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household70)[source(self)]
+[tradersProvider]
+intention 109:
+    +prosumer(household70)[source(household70)] <- ... !pair(Who) / {_20=trader6, Who=household70}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household70)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household71)[source(self)]
+[tradersProvider]
+intention 111:
+    +prosumer(household71)[source(household71)] <- ... !pair(Who) / {_20=trader6, Who=household71}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household71)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household76)[source(self)]
+[tradersProvider]
+intention 112:
+    +prosumer(household76)[source(household76)] <- ... !pair(Who) / {_20=trader6, Who=household76}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household76)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household77)[source(self)]
+[tradersProvider]
+intention 113:
+    +prosumer(household77)[source(household77)] <- ... !pair(Who) / {_20=trader6, Who=household77}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household77)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household74)[source(self)]
+[tradersProvider]
+intention 114:
+    +prosumer(household74)[source(household74)] <- ... !pair(Who) / {_20=trader6, Who=household74}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household74)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household75)[source(self)]
+[tradersProvider]
+intention 115:
+    +prosumer(household75)[source(household75)] <- ... !pair(Who) / {_20=trader6, Who=household75}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household75)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(powerPlant2)[source(self)]
+[tradersProvider]
+intention 116:
+    +prosumer(powerPlant2)[source(powerPlant2)] <- ... !pair(Who) / {_20=trader6, Who=powerPlant2}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(powerPlant2)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(powerPlant1)[source(self)]
+[tradersProvider]
+intention 117:
+    +prosumer(powerPlant1)[source(powerPlant1)] <- ... !pair(Who) / {_20=trader6, Who=powerPlant1}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(powerPlant1)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household36)[source(self)]
+[tradersProvider]
+intention 118:
+    +prosumer(household36)[source(household36)] <- ... !pair(Who) / {_20=trader6, Who=household36}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household36)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household37)[source(self)]
+[tradersProvider]
+intention 120:
+    +prosumer(household37)[source(household37)] <- ... !pair(Who) / {_20=trader6, Who=household37}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household37)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household34)[source(self)]
+[tradersProvider]
+intention 121:
+    +prosumer(household34)[source(household34)] <- ... !pair(Who) / {_20=trader6, Who=household34}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household34)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household35)[source(self)]
+[tradersProvider]
+intention 122:
+    +prosumer(household35)[source(household35)] <- ... !pair(Who) / {_20=trader6, Who=household35}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household35)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household38)[source(self)]
+[tradersProvider]
+intention 123:
+    +prosumer(household38)[source(household38)] <- ... !pair(Who) / {_20=trader6, Who=household38}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household38)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household39)[source(self)]
+[tradersProvider]
+intention 124:
+    +prosumer(household39)[source(household39)] <- ... !pair(Who) / {_20=trader6, Who=household39}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household39)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household40)[source(self)]
+[tradersProvider]
+intention 125:
+    +prosumer(household40)[source(household40)] <- ... !pair(Who) / {_20=trader6, Who=household40}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household40)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household43)[source(self)]
+[tradersProvider]
+intention 126:
+    +prosumer(household43)[source(household43)] <- ... !pair(Who) / {_20=trader6, Who=household43}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household43)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household44)[source(self)]
+[tradersProvider]
+intention 127:
+    +prosumer(household44)[source(household44)] <- ... !pair(Who) / {_20=trader6, Who=household44}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household44)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household41)[source(self)]
+[tradersProvider]
+intention 128:
+    +prosumer(household41)[source(household41)] <- ... !pair(Who) / {_20=trader6, Who=household41}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household41)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household42)[source(self)]
+[tradersProvider]
+intention 129:
+    +prosumer(household42)[source(household42)] <- ... !pair(Who) / {_20=trader6, Who=household42}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household42)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household47)[source(self)]
+[tradersProvider]
+intention 130:
+    +prosumer(household47)[source(household47)] <- ... !pair(Who) / {_20=trader6, Who=household47}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household47)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household48)[source(self)]
+[tradersProvider]
+intention 131:
+    +prosumer(household48)[source(household48)] <- ... !pair(Who) / {_20=trader6, Who=household48}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household48)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household45)[source(self)]
+[tradersProvider]
+intention 132:
+    +prosumer(household45)[source(household45)] <- ... !pair(Who) / {_20=trader6, Who=household45}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household45)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household46)[source(self)]
+[tradersProvider]
+intention 133:
+    +prosumer(household46)[source(household46)] <- ... !pair(Who) / {_20=trader6, Who=household46}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household46)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household49)[source(self)]
+[tradersProvider]
+intention 134:
+    +prosumer(household49)[source(household49)] <- ... !pair(Who) / {_20=trader6, Who=household49}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household49)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household51)[source(self)]
+[tradersProvider]
+intention 135:
+    +prosumer(household51)[source(household51)] <- ... !pair(Who) / {_20=trader6, Who=household51}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household51)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household50)[source(self)]
+[tradersProvider]
+intention 136:
+    +prosumer(household50)[source(household50)] <- ... !pair(Who) / {_20=trader6, Who=household50}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household50)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household54)[source(self)]
+[tradersProvider]
+intention 138:
+    +prosumer(household54)[source(household54)] <- ... !pair(Who) / {_20=trader6, Who=household54}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household54)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household55)[source(self)]
+[tradersProvider]
+intention 139:
+    +prosumer(household55)[source(household55)] <- ... !pair(Who) / {_20=trader6, Who=household55}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household55)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household52)[source(self)]
+[tradersProvider]
+intention 140:
+    +prosumer(household52)[source(household52)] <- ... !pair(Who) / {_20=trader6, Who=household52}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household52)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household53)[source(self)]
+[tradersProvider]
+intention 143:
+    +prosumer(household53)[source(household53)] <- ... !pair(Who) / {_20=trader6, Who=household53}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household53)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household14)[source(self)]
+[tradersProvider]
+intention 144:
+    +prosumer(household14)[source(household14)] <- ... !pair(Who) / {_20=trader6, Who=household14}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household14)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household15)[source(self)]
+[tradersProvider]
+intention 147:
+    +prosumer(household15)[source(household15)] <- ... !pair(Who) / {_20=trader6, Who=household15}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household15)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household12)[source(self)]
+[tradersProvider]
+intention 150:
+    +prosumer(household12)[source(household12)] <- ... !pair(Who) / {_20=trader6, Who=household12}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household12)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household13)[source(self)]
+[tradersProvider]
+intention 151:
+    +prosumer(household13)[source(household13)] <- ... !pair(Who) / {_20=trader6, Who=household13}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household13)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household18)[source(self)]
+[tradersProvider]
+intention 329:
+    +prosumer(household18)[source(household18)] <- ... !pair(Who) / {_20=trader6, Who=household18}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household18)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household19)[source(self)]
+[tradersProvider]
+intention 362:
+    +prosumer(household19)[source(household19)] <- ... !pair(Who) / {_20=trader6, Who=household19}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household19)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household16)[source(self)]
+[tradersProvider]
+intention 364:
+    +prosumer(household16)[source(household16)] <- ... !pair(Who) / {_20=trader6, Who=household16}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household16)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household17)[source(self)]
+[tradersProvider]
+intention 366:
+    +prosumer(household17)[source(household17)] <- ... !pair(Who) / {_20=trader81, Who=household17}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household17)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household21)[source(self)]
+[tradersProvider]
+intention 367:
+    +prosumer(household21)[source(household21)] <- ... !pair(Who) / {_20=trader87, Who=household21}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household21)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household22)[source(self)]
+[tradersProvider]
+intention 368:
+    +prosumer(household22)[source(household22)] <- ... !pair(Who) / {_20=trader86, Who=household22}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household22)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household20)[source(self)]
+[tradersProvider]
+intention 369:
+    +prosumer(household20)[source(household20)] <- ... !pair(Who) / {_20=trader69, Who=household20}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household20)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household25)[source(self)]
+[tradersProvider]
+intention 370:
+    +prosumer(household25)[source(household25)] <- ... !pair(Who) / {_20=trader65, Who=household25}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household25)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household26)[source(self)]
+[tradersProvider]
+intention 371:
+    +prosumer(household26)[source(household26)] <- ... !pair(Who) / {_20=trader96, Who=household26}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household26)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household23)[source(self)]
+[tradersProvider]
+intention 372:
+    +prosumer(household23)[source(household23)] <- ... !pair(Who) / {_20=trader94, Who=household23}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household23)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household24)[source(self)]
+[tradersProvider]
+intention 373:
+    +prosumer(household24)[source(household24)] <- ... !pair(Who) / {_20=trader99, Who=household24}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household24)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household29)[source(self)]
+[tradersProvider]
+intention 374:
+    +prosumer(household29)[source(household29)] <- ... !pair(Who) / {_20=trader98, Who=household29}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household29)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household27)[source(self)]
+[tradersProvider]
+intention 375:
+    +prosumer(household27)[source(household27)] <- ... !pair(Who) / {_20=trader91, Who=household27}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household27)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household28)[source(self)]
+[tradersProvider]
+intention 376:
+    +prosumer(household28)[source(household28)] <- ... !pair(Who) / {_20=trader84, Who=household28}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household28)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household32)[source(self)]
+[tradersProvider]
+intention 377:
+    +prosumer(household32)[source(household32)] <- ... !pair(Who) / {_20=trader82, Who=household32}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household32)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household33)[source(self)]
+[tradersProvider]
+intention 378:
+    +prosumer(household33)[source(household33)] <- ... !pair(Who) / {_20=trader83, Who=household33}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household33)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household30)[source(self)]
+[tradersProvider]
+intention 379:
+    +prosumer(household30)[source(household30)] <- ... !pair(Who) / {_20=trader76, Who=household30}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household30)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household31)[source(self)]
+[tradersProvider]
+intention 380:
+    +prosumer(household31)[source(household31)] <- ... !pair(Who) / {_20=trader75, Who=household31}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household31)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household8)[source(self)]
+[tradersProvider]
+intention 397:
+    +prosumer(household8)[source(household8)] <- ... !pair(Who) / {_20=trader49, Who=household8}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household8)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household7)[source(self)]
+[tradersProvider]
+intention 399:
+    +prosumer(household7)[source(household7)] <- ... !pair(Who) / {_20=trader54, Who=household7}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household7)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household11)[source(self)]
+[tradersProvider]
+intention 400:
+    +prosumer(household11)[source(household11)] <- ... !pair(Who) / {_20=trader56, Who=household11}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household11)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household10)[source(self)]
+[tradersProvider]
+intention 402:
+    +prosumer(household10)[source(household10)] <- ... !pair(Who) / {_20=trader50, Who=household10}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household10)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household9)[source(self)]
+[tradersProvider]
+intention 406:
+    +prosumer(household9)[source(household9)] <- ... !pair(Who) / {_20=trader21, Who=household9}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household9)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household6)[source(self)]
+[tradersProvider]
+intention 418:
+    +prosumer(household6)[source(household6)] <- ... !pair(Who) / {_20=trader38, Who=household6}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household6)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household5)[source(self)]
+[tradersProvider]
+intention 420:
+    +prosumer(household5)[source(household5)] <- ... !pair(Who) / {_20=trader37, Who=household5}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household5)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household4)[source(self)]
+[tradersProvider]
+intention 421:
+    +prosumer(household4)[source(household4)] <- ... !pair(Who) / {_20=trader37, Who=household4}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household4)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household3)[source(self)]
+[tradersProvider]
+intention 423:
+    +prosumer(household3)[source(household3)] <- ... !pair(Who) / {_20=trader37, Who=household3}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household3)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household2)[source(self)]
+[tradersProvider]
+intention 426:
+    +prosumer(household2)[source(household2)] <- ... !pair(Who) / {_20=trader10, Who=household2}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household2)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household1)[source(self)]
+[tradersProvider]
+intention 428:
+    +prosumer(household1)[source(household1)] <- ... !pair(Who) / {_20=trader11, Who=household1}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household1)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household78)[source(self)]
+[tradersProvider]
+intention 473:
+    +prosumer(household78)[source(household78)] <- ... !pair(Who) / {_20=trader15, Who=household78}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household78)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household79)[source(self)]
+[tradersProvider]
+intention 474:
+    +prosumer(household79)[source(household79)] <- ... !pair(Who) / {_20=trader15, Who=household79}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household79)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household83)[source(self)]
+[tradersProvider]
+intention 475:
+    +prosumer(household83)[source(household83)] <- ... !pair(Who) / {_20=trader15, Who=household83}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household83)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household84)[source(self)]
+[tradersProvider]
+intention 476:
+    +prosumer(household84)[source(household84)] <- ... !pair(Who) / {_20=trader15, Who=household84}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household84)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household81)[source(self)]
+[tradersProvider]
+intention 477:
+    +prosumer(household81)[source(household81)] <- ... !pair(Who) / {_20=trader15, Who=household81}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household81)[source(self)]
+[tradersProvider] pairing household81 and trader81
+[tradersProvider] No fail event was generated for +!pair(household82)[source(self)]
+[tradersProvider]
+intention 478:
+    +prosumer(household82)[source(household82)] <- ... !pair(Who) / {_20=trader15, Who=household82}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household82)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household87)[source(self)]
+[tradersProvider]
+intention 479:
+    +prosumer(household87)[source(household87)] <- ... !pair(Who) / {_20=trader15, Who=household87}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household87)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household88)[source(self)]
+[tradersProvider]
+intention 480:
+    +prosumer(household88)[source(household88)] <- ... !pair(Who) / {_20=trader15, Who=household88}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household88)[source(self)]
+[tradersProvider] pairing household88 and trader80
+[tradersProvider] No fail event was generated for +!pair(household85)[source(self)]
+[tradersProvider]
+intention 481:
+    +prosumer(household85)[source(household85)] <- ... !pair(Who) / {_20=trader15, Who=household85}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household85)[source(self)]
+[tradersProvider] No fail event was generated for +!pair(household86)[source(self)]
+[tradersProvider]
+intention 482:
+    +prosumer(household86)[source(household86)] <- ... !pair(Who) / {_20=trader15, Who=household86}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household86)[source(self)]
+[tradersProvider] pairing household86 and trader87
+[tradersProvider] No fail event was generated for +!pair(household80)[source(self)]
+[tradersProvider]
+intention 484:
+    +prosumer(household80)[source(household80)] <- ... !pair(Who) / {_20=trader15, Who=household80}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household80)[source(self)]
+[tradersProvider] pairing household80 and trader86
+[tradersProvider] No fail event was generated for +!pair(household89)[source(self)]
+[tradersProvider]
+intention 486:
+    +prosumer(household89)[source(household89)] <- ... !pair(Who) / {_20=trader15, Who=household89}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household89)[source(self)]
+[tradersProvider] pairing household89 and trader89
+[tradersProvider] pairing household85 and trader69
+[tradersProvider] pairing household87 and trader88
+[tradersProvider] No fail event was generated for +!pair(household90)[source(self)]
+[tradersProvider]
+intention 495:
+    +prosumer(household90)[source(household90)] <- ... !pair(Who) / {_20=trader15, Who=household90}
+
+[tradersProvider] Found a goal for which there is no applicable plan:+!pair(household90)[source(self)]
+[tradersProvider] pairing household90 and trader62
+[tradersProvider] pairing household82 and trader63
+[tradersProvider] pairing household84 and trader61
+[tradersProvider] pairing household83 and trader60
+[tradersProvider] pairing household79 and trader70
+[tradersProvider] pairing household78 and trader66
+[tradersProvider] pairing household1 and trader67
+[tradersProvider] pairing household2 and trader68
+[tradersProvider] pairing household3 and trader64
+[tradersProvider] pairing household4 and trader65
+[tradersProvider] pairing household5 and trader95
+[tradersProvider] pairing household6 and trader96
+[tradersProvider] pairing household9 and trader93
+[tradersProvider] pairing household10 and trader94
+[tradersProvider] pairing household11 and trader99
+[tradersProvider] pairing household7 and trader97
+[tradersProvider] pairing household8 and trader98
+[tradersProvider] pairing household31 and trader91
+[tradersProvider] pairing household30 and trader92
+[tradersProvider] pairing household33 and trader90
+[tradersProvider] pairing household32 and trader84
+[tradersProvider] pairing household28 and trader85
+[tradersProvider] pairing household27 and trader82
+[tradersProvider] pairing household29 and trader83
+[tradersProvider] pairing household24 and trader76
+[tradersProvider] pairing household23 and trader75
+[tradersProvider] pairing household26 and trader78
+[tradersProvider] pairing household25 and trader77
+[tradersProvider] pairing household20 and trader72
+[tradersProvider] pairing household22 and trader71
+[tradersProvider] pairing household21 and trader74
+[tradersProvider] pairing household17 and trader73
+[tradersProvider] pairing household16 and trader79
+[tradersProvider] pairing household19 and trader43
+[tradersProvider] pairing household18 and trader42
+[tradersProvider] pairing household13 and trader45
+[tradersProvider] pairing household12 and trader44
+[tradersProvider] pairing household15 and trader100
+[tradersProvider] pairing household14 and trader41
+[tradersProvider] pairing household53 and trader40
+[tradersProvider] pairing household52 and trader47
+[tradersProvider] pairing household55 and trader46
+[tradersProvider] pairing household54 and trader49
+[tradersProvider] pairing household50 and trader48
+[tradersProvider] pairing household51 and trader54
+[tradersProvider] pairing household49 and trader53
+[tradersProvider] pairing household46 and trader56
+[tradersProvider] pairing household45 and trader55
+[tradersProvider] pairing household48 and trader50
+[tradersProvider] pairing household47 and trader52
+[tradersProvider] pairing household42 and trader51
+[tradersProvider] pairing household41 and trader58
+[tradersProvider] pairing household44 and trader57
+[tradersProvider] pairing household43 and trader59
+[tradersProvider] pairing household40 and trader21
+[tradersProvider] pairing household39 and trader20
+[tradersProvider] pairing household38 and trader23
+[tradersProvider] pairing household35 and trader22
+[tradersProvider] pairing household34 and trader29
+[tradersProvider] pairing household37 and trader28
+[tradersProvider] pairing household36 and trader25
+[tradersProvider] pairing powerPlant1 and trader24
+[tradersProvider] pairing powerPlant2 and trader27
+[tradersProvider] pairing household75 and trader26
+[tradersProvider] pairing household74 and trader32
+[tradersProvider] pairing household77 and trader31
+[tradersProvider] pairing household76 and trader34
+[tradersProvider] pairing household71 and trader33
+[tradersProvider] pairing household70 and trader30
+[tradersProvider] pairing household73 and trader39
+[tradersProvider] pairing household72 and trader36
+[tradersProvider] pairing factory1 and trader35
+[tradersProvider] pairing household68 and trader38
+[tradersProvider] pairing household67 and trader37
+[tradersProvider] pairing household69 and trader10
+[tradersProvider] pairing household64 and trader12
+[tradersProvider] pairing factory7 and trader11
+[tradersProvider] pairing household63 and trader18
+[tradersProvider] pairing factory6 and trader17
+[tradersProvider] pairing household66 and trader19
+[tradersProvider] pairing household65 and trader14
+[tradersProvider] pairing factory8 and trader13
+[tradersProvider] pairing factory3 and trader16
+[tradersProvider] pairing factory2 and trader15
+[logger] produced: 0 potential 0
+[logger] consumed: 0 need 0
+[logger] new turn begins 1
+[factory1] factory
+[factory6] factory
+[factory8] factory
+[factory3] factory
+[factory7] factory
+[factory2] factory
+[powerPlant2] newProduction67.3772153301779
+[powerPlant1] newProduction545.0008186276925

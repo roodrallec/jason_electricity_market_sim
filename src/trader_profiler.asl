@@ -8,7 +8,7 @@ prosumer_id(0).
 !pairing_countdown.
 
 +!pairing_countdown 
-	<-	.wait(1500);
+	<-	.wait(5000);
 		.send(simulator, achieve, simulate).
 
 +!trader(T) 
